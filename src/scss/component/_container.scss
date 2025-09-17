@@ -1,0 +1,20 @@
+@import '../base/mixins.scss';
+
+$container-padding-y: 120px;
+$container-padding-x: 147px;
+$container-padding-tablet-y: 80px;
+$container-padding-tablet-x: 50px;
+$container-padding-mobile-y: 80px;
+$container-padding-mobile-x: 50px;
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: $container-padding-y $container-padding-x;
+    @include respond-to-max('mobile') {
+        padding: $container-padding-mobile-y $container-padding-mobile-x;
+    }
+    @include respond-to-max('tablet') {
+        padding: $container-padding-tablet-y $container-padding-tablet-x;
+    }
+}

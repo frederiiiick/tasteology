@@ -1,0 +1,152 @@
+// =============================================================================
+// MEDIA QUERY MIXINS - TABLET & MOBILE
+// =============================================================================
+
+// Breakpoint variables
+$breakpoints: (
+  'mobile': 480px,   // Mobile devices
+  'tablet': 768px,   // Tablet devices
+  'desktop': 1024px  // Small desktop devices
+);
+
+// Media query mixin (min-width only)
+@mixin respond-to-min($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' not found in $breakpoints.";
+  }
+}
+
+// Media query mixin (max-width only)
+@mixin respond-to-max($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' not found in $breakpoints.";
+  }
+}
+
+// =============================================================================
+// COMMON RESPONSIVE MIXINS
+// =============================================================================
+
+// Responsive grid columns (mobile to tablet to desktop)
+@mixin responsive-grid($mobile-cols: 1, $tablet-cols: 2, $desktop-cols: 3, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($mobile-cols, 1fr);
+  gap: $gap;
+  
+  @include respond-to-min('tablet') {
+    grid-template-columns: repeat($tablet-cols, 1fr);
+  }
+
+  @include respond-to-min('desktop') {
+    grid-template-columns: repeat($desktop-cols, 1fr);
+  }
+}
+
+// Responsive spacing (padding/margin)
+@mixin responsive-spacing($property, $mobile-value, $tablet-value, $desktop-value: null) {
+  #{$property}: $mobile-value;
+  
+  @include respond-to-min('tablet') {
+    #{$property}: $tablet-value;
+  }
+  
+  @if $desktop-value {
+    @include respond-to-min('desktop') {
+      #{$property}: $desktop-value;
+    }
+  }
+}
+
+// Responsive font size
+@mixin responsive-font-size($mobile-size, $tablet-size, $desktop-size: null) {
+  font-size: $mobile-size;
+  
+  @include respond-to-min('tablet') {
+    font-size: $tablet-size;
+  }
+  
+  @if $desktop-size {
+    @include respond-to-min('desktop') {
+      font-size: $desktop-size;
+    }
+  }
+}
+
+// =============================================================================
+// UTILITY MIXINS
+// =============================================================================
+
+// Hide on mobile
+@mixin hide-mobile {
+  @include respond-to-max('mobile') {
+    display: none !important;
+  }
+}
+
+// Hide on tablet
+@mixin hide-tablet {
+  @include respond-to-max('tablet') {
+    display: none !important;
+  }
+}
+
+// Show only on mobile
+@mixin show-mobile-only {
+  display: block;
+  
+  @include respond-to-min('tablet') {
+    display: none !important;
+  }
+}
+
+// Show only on tablet and up
+@mixin show-tablet-up {
+  display: none;
+  
+  @include respond-to-min('tablet') {
+    display: block !important;
+  }
+}
+
+// Hide on desktop and up
+@mixin hide-desktop {
+  @include respond-to-min('desktop') {
+    display: none !important;
+  }
+}
+
+// Show only on desktop and up
+@mixin show-desktop-up {
+  display: none;
+  
+  @include respond-to-min('desktop') {
+    display: block !important;
+  }
+}
+
+
+// =============================================================================
+// COMMON LAYOUT MIXINS
+// =============================================================================
+
+// Flexbox center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Flexbox space between
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

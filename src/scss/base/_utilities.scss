@@ -1,0 +1,94 @@
+// =============================================================================
+// UTILITY CLASSES
+// =============================================================================
+
+// Flexbox Utilities
+// =============================================================================
+
+// Display
+.flex { display: flex !important; }
+// Flex Direction
+.flex-row { flex-direction: row !important; }
+.flex-row-reverse { flex-direction: row-reverse !important; }
+.flex-column { flex-direction: column !important; }
+.flex-column-reverse { flex-direction: column-reverse !important; }
+
+// Flex Wrap
+.flex-wrap { flex-wrap: wrap !important; }
+.flex-nowrap { flex-wrap: nowrap !important; }
+.flex-wrap-reverse { flex-wrap: wrap-reverse !important; }
+
+// Justify Content
+.justify-start { justify-content: flex-start !important; }
+.justify-end { justify-content: flex-end !important; }
+.justify-center { justify-content: center !important; }
+.justify-between { justify-content: space-between !important; }
+.justify-around { justify-content: space-around !important; }
+
+// Align Items
+.align-start { align-items: flex-start !important; }
+.align-end { align-items: flex-end !important; }
+.align-center { align-items: center !important; }
+.align-baseline { align-items: baseline !important; }
+
+// Align Self
+.align-self-start { align-self: flex-start !important; }
+.align-self-end { align-self: flex-end !important; }
+.align-self-center { align-self: center !important; }
+
+// Flex Shorthand
+.flex-1 { flex: 1 1 0% !important; }
+.flex-2 { flex: 2 1 0% !important; }
+.flex-3 { flex: 3 1 0% !important; }
+.flex-4 { flex: 4 1 0% !important; }
+.flex-5 { flex: 5 1 0% !important; }
+.flex-6 { flex: 6 1 0% !important; }
+.flex-7 { flex: 7 1 0% !important; }
+.flex-8 { flex: 8 1 0% !important; }
+.flex-9 { flex: 9 1 0% !important; }
+.flex-10 { flex: 10 1 0% !important; }
+
+
+// Gap Utilities (px values)
+// =============================================================================
+
+// General Gap
+.gap-0 { gap: 0 !important; }
+.gap-10 { gap: 10px !important; }
+.gap-20 { gap: 20px !important; }
+.gap-30 { gap: 30px !important; }
+.gap-40 { gap: 40px !important; }
+
+// Column Gap
+.gap-x-0 { column-gap: 0 !important; }
+.gap-x-10 { column-gap: 10px !important; }
+.gap-x-20 { column-gap: 20px !important; }
+.gap-x-30 { column-gap: 30px !important; }
+.gap-x-40 { column-gap: 40px !important; }
+
+// Row Gap
+.gap-y-0 { row-gap: 0 !important; }
+.gap-y-10 { row-gap: 10px !important; }
+.gap-y-20 { row-gap: 20px !important; }
+.gap-y-30 { row-gap: 30px !important; }
+.gap-y-40 { row-gap: 40px !important; }
+
+// Height
+.h-full { height: 100% !important; }
+
+// Text and Font
+.font-bold { font-weight: bold !important; }
+.text-center { text-align: center !important; }
+
+// Accessibility
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

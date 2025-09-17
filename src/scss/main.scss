@@ -1,0 +1,96 @@
+// Base styles
+
+@import 'base/variables';
+@import 'base/utilities';
+
+body {
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
+  color: $text-light;
+  background-color: $background-dark;
+}
+
+// Component styles
+@import 'component/card';
+@import 'component/gallery';
+@import 'component/container';
+@import 'component/grid';
+@import 'component/modal';
+
+// Custom styles
+#section-1.container {
+  .container__content {
+    flex-direction: row;
+  }
+
+  @include respond-to-max('mobile') {
+    .container__content {
+      flex-direction: column;
+
+      .container__content__left {
+        >div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  @include respond-to-max('tablet') {
+    .container__content {
+      flex-direction: column;
+    }
+  }
+
+  @include respond-to-max('desktop') {
+    .container__content {
+      flex-direction: column;
+    }
+  }
+}
+
+#section-2.container {
+  .container__content {
+    flex-direction: row;
+  }
+  
+  @include respond-to-max('tablet') {
+    .container__content {
+      flex-direction: column;
+      gap: 50px !important;
+    }
+  }
+
+  // @include respond-to-max('desktop') {
+  //   .container__content {
+  //     flex-direction: column;
+  //   }
+  // }
+}
+
+.headline {
+  font-size: 30px;
+  font-weight: $font-weight-light;
+  line-height: 1.2;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $text-light;
+  letter-spacing: 1.5px;
+  margin: 0;
+  @include responsive-font-size(20px, 30px);
+  @include responsive-spacing(padding-bottom, 20px, 30px);
+}
+
+.content {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.43;
+  font-weight: $font-weight-light;
+}
+
+.sub-headline {
+  font-size: 15px;
+  margin: 0;
+  font-weight: $font-weight-bold;
+  line-height: 1.4;
+  color: $text-red;
+}

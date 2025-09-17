@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover the science of cooking with Tasteology. Learn about molecular gastronomy, perfect egg cooking techniques, and how colors influence taste perception." />
+    <meta name="keywords" content="cooking, molecular gastronomy, taste, food science, color psychology" />
+    <meta name="author" content="Tasteology" />
+    
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Tasteology - The Science of Cooking | Molecular Gastronomy & Taste Psychology</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/vendor/normalize.css" />
+    <link rel="stylesheet" href="/src/scss/main.scss" />
+</head>
+
+<body>
+    <div id="app">
+        <section id="section-1" class="container h-full fade-in">
+            <div class="container__content flex h-full gap-30">
+                <div class="container__content__left">
+                    <div class="flex h-full gap-10">
+                        <img src="/assets/images/gallery/left.png" alt="Tasteology Gallery 1" class="gallery-image slide-in-left" data-modal-src="/assets/images/gallery/left.png" />
+                        <div class="h-full flex flex-column gap-10 slide-in-right">
+                            <img src="/assets/images/gallery/right-top.png" alt="Tasteology Gallery 2" class="gallery-image" data-modal-src="/assets/images/gallery/right-top.png" />
+                            <img src="/assets/images/gallery/right-bottom.png" alt="Tasteology Gallery 3" class="gallery-image" data-modal-src="/assets/images/gallery/right-bottom.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="container__content__right">
+                    <div class="flex flex-column gap-30">
+                        <h1 class="headline">WHAT DOES COOKING MEAN?</h1>
+                        <p class="content">Is it simply applying heat to a food product? A way of making certain food safe to eat? Or a way to create flavour and make food more appealing? This is just part of what Hervé This, the father of molecular gastronomy, has dedicated his life to finding out. We spoke to him to find out what his experiments have told him. And in the process even discovered the secret to cooking the perfect egg...</p>
+                        <div class="flex flex-column gap-10">
+                            <h4 class="sub-headline">THE PERFECT EGG</h4>
+                            <p class="content font-bold">Keep water between 67 and 68°C for a flavourful, tender yolk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-2" class="container fade-in">
+            <div class="flex flex-column gap-30 align-center">
+                <h2 class="headline">TASTE THE COLOURS</h2>
+                <div class="flex gap-10 container__content">
+                    <div class="card slide-in-left">
+                        <img src="/assets/images/colors/red.png" alt="Red Color" class="card__image gallery-image" />
+                        <div class="card__content gap-10">
+                            <h4 class="card__title text-center">RED</h4>
+                            <p class="card__description text-center">Red foods remind us of berries and soft fruits, so we anticipate a sweet taste.</p>
+                        </div>
+                    </div>
+                    <div class="card slide-in-up">
+                        <img src="/assets/images/colors/green.png" alt="Green Color" class="card__image gallery-image" />
+                        <div class="card__content gap-10">
+                            <h4 class="card__title text-center">GREEN</h4>
+                            <p class="card__description text-center">Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card slide-in-right">
+                        <img src="/assets/images/colors/white.png" alt="White Color" class="card__image gallery-image" />
+                        <div class="card__content gap-10">
+                            <h4 class="card__title text-center">White</h4>
+                            <p class="card__description text-center">White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Close modal">&times;</button>
+            <img id="modalImage" class="modal__image" src="" alt="" />
+            <h2 id="modalTitle" class="sr-only">Image Gallery</h2>
+        </div>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
