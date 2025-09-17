@@ -2,6 +2,10 @@
 
 A modern web application exploring the fascinating world of molecular gastronomy and taste psychology. Discover how colors influence taste perception and learn about the science behind perfect cooking techniques.
 
+## 🌐 Live Demo
+
+**Live Application**: [https://frederiiiick.github.io/](https://frederiiiick.github.io/)
+
 ## 🚀 Features
 
 - **Interactive Gallery**: Click on images to view them in a full-screen modal
