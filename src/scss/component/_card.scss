@@ -1,4 +1,4 @@
-@import '../base/variables.scss';
+@use '../base/variables' as *;
 
 .card {
     display: flex;

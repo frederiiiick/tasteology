@@ -1,4 +1,4 @@
-@import '../base/mixins.scss';
+@use '../base/mixins' as *;
 
 $container-padding-y: 120px;
 $container-padding-x: 147px;

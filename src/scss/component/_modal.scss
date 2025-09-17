@@ -1,5 +1,5 @@
-@import '../base/mixins.scss';
-@import '../base/animate.scss';
+@use '../base/mixins' as *;
+@use '../base/animate';
 
 .modal {
     position: fixed;

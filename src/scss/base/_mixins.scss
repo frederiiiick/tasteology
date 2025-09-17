@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // =============================================================================
 // MEDIA QUERY MIXINS - TABLET & MOBILE
 // =============================================================================
@@ -11,8 +13,8 @@ $breakpoints: (
 
 // Media query mixin (min-width only)
 @mixin respond-to-min($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
       @content;
     }
   } @else {
@@ -22,8 +24,8 @@ $breakpoints: (
 
 // Media query mixin (max-width only)
 @mixin respond-to-max($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (max-width: map-get($breakpoints, $breakpoint)) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (max-width: map.get($breakpoints, $breakpoint)) {
       @content;
     }
   } @else {

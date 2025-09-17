@@ -1,7 +1,14 @@
 // Base styles
+@use 'base/variables' as *;
+@use 'base/utilities';
+@use 'base/mixins' as *;
 
-@import 'base/variables';
-@import 'base/utilities';
+// Component styles
+@use 'component/card';
+@use 'component/gallery';
+@use 'component/container';
+@use 'component/grid';
+@use 'component/modal';
 
 body {
   font-family: $font-family;
@@ -9,13 +16,6 @@ body {
   color: $text-light;
   background-color: $background-dark;
 }
-
-// Component styles
-@import 'component/card';
-@import 'component/gallery';
-@import 'component/container';
-@import 'component/grid';
-@import 'component/modal';
 
 // Custom styles
 #section-1.container {
